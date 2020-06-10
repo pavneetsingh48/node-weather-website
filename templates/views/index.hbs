@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOME</title>
+        <link rel="icon" href="/img/weather.PNG">
+        <link rel="stylesheet" href="css/styles.css"/>
+        {{!-- <script src="/js/client.js"></script> --}}
+    </head>
+
+    <body>
+        <div class="main-content">
+            {{>header}}         {{!-- we have done flexing here so that footer is outside and it always remain at the bottom --}}
+            <p>use this site to get your weather!!! </p>
+
+            <form>
+                <input placeholder="search location here">
+                <button>search</button>
+            </form>
+            <p id="msg1"></p>
+            <p id="msg2"></p>
+        </div>
+        {{!-- <p>made by {{name}} and he is {{age}} years old</p> --}}
+        {{>footer}}
+        <script src="/js/client.js"></script>
+    </body>
+</html> 
