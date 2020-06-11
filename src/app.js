@@ -46,6 +46,8 @@ hbs.registerPartials(partialpath)
 const forecast=require ('./utils/forecast.js')
 const geocode = require('./utils/geocode.js')
 
+const port = process.env.PORT || 3000 //we are using this so tht heroku can identify the 
+//port adn the environment created by it ad link it with the app 
                                 
 
 
@@ -147,6 +149,6 @@ app.get('*',(req,res) => {
     })
 })
 
-app.listen(3000 , ()=>{
-    console.log('server is up on port 3000')
+app.listen(port, ()=>{
+    console.log('server is up on port '+port)
 })
