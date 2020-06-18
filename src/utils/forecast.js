@@ -14,7 +14,7 @@ const request= require('request')
                 callback('unable to find the location,try another search',undefined)
             }
             else {
-                callback(undefined,'the current temperature is '  + response.body.current.temperature + ' deg c . there is ' + response.body.current.precip + ' % chances of rain')
+                callback(undefined,'the current actual temperature is '  + response.body.current.temperature + ' deg c .it feels like '+response.body.current.feelslike +' deg c . there is ' + response.body.current.precip + ' % chances of rain . The current windspeed is ' + response.body.current.wind_speed + ' km/h. the current visibility is '+ response.body.current.visibility + ' km')
             }
             
          })
